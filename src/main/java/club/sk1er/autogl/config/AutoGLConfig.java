@@ -22,7 +22,7 @@ public class AutoGLConfig extends Vigilant {
         name = "AntiGL",
         category = "General",
         subcategory = "Miscellaneous",
-        description = "Remove gl's from chat."
+        description = "Remove GL's from chat."
     )
     private boolean antiGLEnabled = false;
     @Property(
