@@ -63,10 +63,10 @@ public class AutoGLListener {
     }
 
     private String getPrimaryString() {
-        int autoGGPhrase = AutoGL.instance.getAutoGLConfig().getAutoGLPhrase();
+        int autoGLPhrase = AutoGL.instance.getAutoGLConfig().getAutoGLPhrase();
         String[] primaryStrings = getPrimaryStrings();
-        if (autoGGPhrase > 0 && autoGGPhrase < primaryStrings.length) {
-            return primaryStrings[autoGGPhrase];
+        if (autoGLPhrase > 0 && autoGLPhrase < primaryStrings.length) {
+            return primaryStrings[autoGLPhrase];
         }
 
         return "gl";
@@ -74,8 +74,8 @@ public class AutoGLListener {
 
     private String[] getPrimaryStrings() {
         try {
-            Property autoGGPhrase = AutoGLConfig.class.getDeclaredField("autoGLPhrase").getAnnotation(Property.class);
-            return autoGGPhrase.options();
+            Property autoGLPhrase = AutoGLConfig.class.getDeclaredField("autoGLPhrase").getAnnotation(Property.class);
+            return autoGLPhrase.options();
         } catch (NoSuchFieldException e) {
             e.printStackTrace();
         }
