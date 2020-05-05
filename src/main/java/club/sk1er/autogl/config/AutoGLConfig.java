@@ -31,7 +31,7 @@ public class AutoGLConfig extends Vigilant {
         category = "General",
         subcategory = "General",
         description = "Choose what message is said on game completion",
-        options = {"gl", "Good Luck", "GL", "Have a good game!", "glhf"}
+        options = {"gl", "Good Luck", "GL", "Have a good game!", "glhf", "AutoGL By Sk1er"}
     )
     private int autoGLPhrase = 1;
 
