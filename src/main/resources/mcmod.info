@@ -2,7 +2,7 @@
   {
     "modid": "autogl",
     "name": "AutoGL",
-    "description": "AutoGL automatically says \"gl\" before a has started on Hypixel.",
+    "description": "AutoGL automatically says \"gl\" before a game has started on Hypixel.",
     "version": "${version}",
     "mcversion": "${mcversion}",
     "url": "https://sk1er.club/",
@@ -10,7 +10,7 @@
     "authorList": [
       "Sk1er"
     ],
-    "credits": "Code Adapted From 2Pi's AutoGG",
+    "credits": "Code adapted from AutoGG.",
     "logoFile": "",
     "screenshots": [],
     "dependencies": []
