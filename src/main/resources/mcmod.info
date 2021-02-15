@@ -2,15 +2,15 @@
   {
     "modid": "autogl",
     "name": "AutoGL",
-    "description": "AutoGL automatically says \"gl\" before a game has started on Hypixel.",
+    "description": "AutoGL automatically says \"gl\" before a game has started on Hypixel. Made by Sk1er LLC, Maintained by MG95",
     "version": "${version}",
     "mcversion": "${mcversion}",
-    "url": "https://sk1er.club/",
+    "url": "https://mg95.dev/",
     "updateUrl": "",
     "authorList": [
       "Sk1er"
     ],
-    "credits": "Code adapted from AutoGG.",
+    "credits": "Code adapted from AutoGG by Sk1er LLC.",
     "logoFile": "",
     "screenshots": [],
     "dependencies": []
