@@ -47,15 +47,13 @@ public class AutoGLConfig extends Vigilant {
 
     @Property(
             type = PropertyType.SLIDER, name = "Delay",
-            description = "The delay between the selected time message and sending of GL (Seconds)",
+            description = "The delay between the selected time message and sending of the message (Seconds)",
             category = "General",
             subcategory = "General",
             min = 0,
             max = 20
     )
     private int autoGLDelay = 5;
-
-
 
 
     public AutoGLConfig() {

@@ -23,7 +23,7 @@ public class AutoGLListener {
         invoked = false;
     }
 
-    public String setAutoGLTime() {
+    public String getDelayTime() {
         int data = AutoGL.instance.getAutoGLConfig().getAutoGLTime();
         if (data > 1 && data < 6) {
             return "The game starts in " + data + " seconds!";
@@ -46,7 +46,7 @@ public class AutoGLListener {
             return;
         }
 
-        String msg = setAutoGLTime();
+        String msg = getDelayTime();
         int delay = AutoGL.instance.getAutoGLConfig().getAutoGLDelay();
 
         if (unformattedText.startsWith(msg)) {
