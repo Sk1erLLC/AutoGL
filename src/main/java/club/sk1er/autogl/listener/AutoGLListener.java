@@ -23,6 +23,14 @@ public class AutoGLListener {
         invoked = false;
     }
 
+    public String getDelayTime() {
+        int data = AutoGL.instance.getAutoGLConfig().getAutoGLTime();
+        if (data > 1 && data < 6) {
+            return "The game starts in " + data + " seconds!";
+        }
+        return "The game starts in 1 second!";
+    }
+
     @SubscribeEvent
     public void onChat(ClientChatReceivedEvent event) {
         String s = event.message.getUnformattedText().toLowerCase(Locale.ENGLISH);
@@ -37,19 +45,23 @@ public class AutoGLListener {
         if (!MinecraftUtils.isHypixel() || !AutoGL.instance.getAutoGLConfig().isAutoGLEnabled() || AutoGL.instance.isRunning()) {
             return;
         }
-        if (unformattedText.startsWith("The game starts in 5 seconds!")) {
+
+        String msg = getDelayTime();
+        int delay = AutoGL.instance.getAutoGLConfig().getAutoGLDelay();
+
+        if (unformattedText.startsWith(msg)) {
             AutoGL.instance.setRunning(true);
             invoked = true;
             Multithreading.schedule(() -> {
                 try {
                     Minecraft.getMinecraft().thePlayer.sendChatMessage(
-                        "/achat " + (getPrimaryString())
+                            "/achat " + (getPrimaryString())
                     );
                     end();
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-            }, 0, TimeUnit.MILLISECONDS);
+            }, delay, TimeUnit.SECONDS);
         }
     }
 
